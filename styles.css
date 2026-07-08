@@ -242,7 +242,7 @@ h1 {
   transform: rotate(3deg);
 }
 
-.ticket-card {
+.curated-card {
   left: -20px;
   bottom: 60px;
   width: 210px;
@@ -261,8 +261,8 @@ h1 {
 
 .date-card span,
 .date-card small,
-.ticket-card span,
-.ticket-card small,
+.curated-card span,
+.curated-card small,
 .fest-card span,
 .fest-card small {
   display: block;
@@ -278,7 +278,7 @@ h1 {
   line-height: 1;
 }
 
-.ticket-card strong,
+.curated-card strong,
 .fest-card strong {
   display: block;
   margin: 5px 0 4px;
@@ -286,22 +286,8 @@ h1 {
   line-height: 1.08;
 }
 
-.ticket-card strong {
+.curated-card strong {
   font-size: 1.38rem;
-}
-
-.ticket-card::after {
-  display: grid;
-  width: 64px;
-  height: 64px;
-  place-items: center;
-  border: 2px solid var(--ink);
-  border-radius: 8px;
-  margin-top: 12px;
-  background:
-    linear-gradient(90deg, var(--ink) 0 18%, transparent 18% 35%, var(--ink) 35% 56%, transparent 56% 70%, var(--ink) 70%),
-    linear-gradient(0deg, transparent 0 18%, rgba(255, 255, 255, 0.85) 18% 34%, transparent 34% 55%, rgba(255, 255, 255, 0.85) 55% 72%, transparent 72%);
-  content: "";
 }
 
 .oktoberfest-section {
@@ -746,17 +732,11 @@ h1 {
     font-size: 2rem;
   }
 
-  .ticket-card {
+  .curated-card {
     left: 8px;
     bottom: 54px;
     width: 156px;
     padding: 12px;
-  }
-
-  .ticket-card::after {
-    width: 48px;
-    height: 48px;
-    margin-top: 8px;
   }
 
   .fest-card {
