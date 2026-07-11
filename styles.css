@@ -129,7 +129,8 @@ button {
 
 .hero,
 .section,
-.plus-one {
+.plus-one,
+.plus-teaser {
   width: min(1180px, calc(100% - 36px));
   margin-inline: auto;
 }
@@ -137,6 +138,7 @@ button {
 .hero > *,
 .section > *,
 .plus-one > *,
+.plus-teaser > *,
 .promise-grid > *,
 .detail-grid > *,
 .flow-list > *,
@@ -212,6 +214,35 @@ h1 {
   gap: 14px;
 }
 
+.plus-teaser {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  align-items: center;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  margin-top: 8px;
+  margin-bottom: 22px;
+  padding: 18px 20px;
+  background: var(--card);
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
+.plus-teaser .kicker {
+  margin-bottom: 4px;
+}
+
+.plus-teaser strong {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.22rem;
+}
+
+.plus-teaser span {
+  color: var(--muted);
+  line-height: 1.45;
+}
+
 .hero-visual {
   position: relative;
   min-height: 430px;
@@ -237,7 +268,7 @@ h1 {
 .date-card {
   right: -10px;
   bottom: 18px;
-  width: 210px;
+  width: 245px;
   padding: 18px;
   transform: rotate(3deg);
 }
@@ -250,21 +281,10 @@ h1 {
   transform: rotate(-4deg);
 }
 
-.fest-card {
-  right: 38px;
-  top: 20px;
-  width: 190px;
-  padding: 14px;
-  background: var(--gold-light);
-  transform: rotate(-2deg);
-}
-
 .date-card span,
 .date-card small,
 .curated-card span,
-.curated-card small,
-.fest-card span,
-.fest-card small {
+.curated-card small {
   display: block;
   color: var(--muted);
   font-weight: 850;
@@ -278,8 +298,7 @@ h1 {
   line-height: 1;
 }
 
-.curated-card strong,
-.fest-card strong {
+.curated-card strong {
   display: block;
   margin: 5px 0 4px;
   font-size: 1.25rem;
@@ -670,12 +689,17 @@ h1 {
   .plus-one {
     grid-template-columns: 1fr;
   }
+
+  .plus-teaser {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 560px) {
   .hero,
   .section,
-  .plus-one {
+  .plus-one,
+  .plus-teaser {
     width: min(100% - 24px, 1180px);
   }
 
@@ -709,6 +733,15 @@ h1 {
     width: calc(100% - 8px);
   }
 
+  .plus-teaser {
+    padding: 16px;
+  }
+
+  .plus-teaser strong {
+    display: block;
+    margin: 0 0 6px;
+  }
+
   .hero-visual {
     min-height: 360px;
   }
@@ -725,7 +758,7 @@ h1 {
   .date-card {
     right: 8px;
     bottom: 14px;
-    width: 172px;
+    width: 188px;
   }
 
   .date-card strong {
@@ -737,12 +770,6 @@ h1 {
     bottom: 54px;
     width: 156px;
     padding: 12px;
-  }
-
-  .fest-card {
-    right: 8px;
-    top: 12px;
-    width: 154px;
   }
 
   .oktoberfest-card {
