@@ -11,7 +11,7 @@ function showToast(message) {
 
 plusOneLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    showToast("+1-Mail wird geöffnet. Betreff: Lagerfeuer Augsburg +1");
+    showToast("+1-Vorschlag wird geöffnet. Betreff: Lagerfeuer Augsburg +1");
   });
 });
 
