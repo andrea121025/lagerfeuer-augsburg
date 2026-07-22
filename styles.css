@@ -609,6 +609,12 @@ h1 {
   font-weight: 950;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 .toast {
   position: fixed;
   right: 18px;
