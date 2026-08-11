@@ -130,7 +130,8 @@ button {
 .hero,
 .section,
 .plus-one,
-.plus-teaser {
+.plus-teaser,
+.highlight-strip {
   width: min(1180px, calc(100% - 36px));
   margin-inline: auto;
 }
@@ -139,6 +140,7 @@ button {
 .section > *,
 .plus-one > *,
 .plus-teaser > *,
+.highlight-strip > *,
 .promise-grid > *,
 .detail-grid > *,
 .flow-list > *,
@@ -327,7 +329,7 @@ h1 {
   box-shadow: 7px 7px 0 var(--ink);
 }
 
-.oktoberfest-card div {
+.oktoberfest-card > div:first-child {
   border: 3px solid var(--ink);
   border-radius: 12px;
   padding: 16px;
@@ -354,6 +356,11 @@ h1 {
   line-height: 1.55;
 }
 
+.oktoberfest-copy {
+  display: grid;
+  gap: 10px;
+}
+
 .section {
   padding: clamp(54px, 7vw, 92px) 0;
 }
@@ -365,6 +372,10 @@ h1 {
 
 .section-heading.compact {
   max-width: 760px;
+}
+
+.org-heading {
+  margin-top: clamp(34px, 5vw, 56px);
 }
 
 .section-heading h2,
@@ -470,6 +481,15 @@ h1 {
   line-height: 1.25;
 }
 
+.detail-action a {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 14px;
+  border-bottom: 2px solid var(--ink);
+  color: var(--ink);
+  font-weight: 950;
+}
+
 .flow-list {
   display: grid;
   gap: 16px;
@@ -500,6 +520,36 @@ h1 {
 .flow-list h3,
 .flow-list p {
   margin: 0;
+}
+
+.highlight-strip {
+  display: grid;
+  gap: 8px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  margin-block: clamp(18px, 4vw, 42px);
+  padding: 22px;
+  background:
+    linear-gradient(135deg, rgba(238, 107, 47, 0.18), rgba(255, 217, 121, 0.78)),
+    var(--card);
+  box-shadow: 7px 7px 0 var(--ink);
+}
+
+.highlight-strip .kicker,
+.highlight-strip strong,
+.highlight-strip span {
+  margin: 0;
+}
+
+.highlight-strip strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  line-height: 1.04;
+}
+
+.highlight-strip span {
+  color: var(--muted);
+  font-weight: 850;
 }
 
 .plus-one {
@@ -705,7 +755,8 @@ h1 {
   .hero,
   .section,
   .plus-one,
-  .plus-teaser {
+  .plus-teaser,
+  .highlight-strip {
     width: min(100% - 24px, 1180px);
   }
 
