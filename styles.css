@@ -407,7 +407,7 @@ h1 {
 }
 
 .detail-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .promise-grid article,
@@ -463,7 +463,7 @@ h1 {
 }
 
 .detail-grid article {
-  min-height: 132px;
+  min-height: 214px;
   padding: 18px;
   background: #fff9e9;
 }
@@ -479,6 +479,15 @@ h1 {
   display: block;
   font-size: 1.22rem;
   line-height: 1.25;
+}
+
+.detail-grid ul {
+  display: grid;
+  gap: 7px;
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.42;
 }
 
 .detail-action a {
